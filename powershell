@@ -1,1 +1,121 @@
+# This script will complete conditions and operators.
+# Linux Practice
+#Name of module --- Linux Basic calculator
+#Date : 18th feb 2021 10:00:PM
+#Author: Raksha
+#Modification History : None 
+#Functions -- None
+#Global Variables--- 
 
+
+
+echo "simple calculator"
+sum=0
+i="y"
+echo "enter first number"
+read n1
+echo "enter second number"
+read n2
+while [ $i = "y" ]
+do
+echo "1.Addition"
+echo "2.Subtraction"
+echo "3.Multiplication"
+echo "4.Division"
+echo "Enter choice"
+read ch
+case $ch in
+1)sum=$(echo " $n1 + $n2" | bc -l)
+echo "Addition is =" $sum;;
+2)sum=$(echo "$n1 - $n2" | bc -l)
+echo "Sub is =" $sum;;
+3)sum=$(echo "$n1 * $n2" | bc -l)
+echo "Mul is =" $sum;;
+4)sum=$(echo "$n1 / $n2" | bc -l)
+echo "div is =" $sum;;
+*)echo "invalid choice"
+esac
+echo "Do you want to continue"
+read i
+if [ $i != "y" ]
+then
+exit
+fi
+done
+---------------------------------------------------------------------------------------------------------
+#loops
+count=1
+while [ $count -lt 10 ]
+do 
+	echo "$count"
+	count=`expr $count + 1`
+done
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#comparision_operators
+
+if [ $a -eq $b ]
+then
+   echo "$a -eq $b : a is equal to b"
+else
+   echo "$a -eq $b: a is not equal to b"
+fi
+
+if [ $a -ne $b ]
+then
+   echo "$a -ne $b: a is not equal to b"
+else
+   echo "$a -ne $b : a is equal to b"
+fi
+
+if [ $a -gt $b ]
+then
+   echo "$a -gt $b: a is greater than b"
+else
+   echo "$a -gt $b: a is not greater than b"
+fi
+
+if [ $a -lt $b ]
+then
+   echo "$a -lt $b: a is less than b"
+else
+   echo "$a -lt $b: a is not less than b"
+fi
+
+if [ $a -ge $b ]
+then
+   echo "$a -ge $b: a is greater or  equal to b"
+else
+   echo "$a -ge $b: a is not greater or equal to b"
+fi
+
+if [ $a -le $b ]
+then
+   echo "$a -le $b: a is less or  equal to b"
+else
+   echo "$a -le $b: a is not less or equal to b"
+   
+for i in {0..10..2}
+  do 
+     echo "Welcome $i times"
+ done
+
+
+names='Stan Kyle Cartman'
+for name in $names
+do
+echo $name
+done
+echo All done
+© 2021 GitHub, Inc.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#shell_variables
+
+ead -p "Enter a number: " numb1
+read -p "Enter another number : " numb2
+result=`expr $numb1 + $numb2`
+echo "addition is : " $result
+
+read -p "Enter a number: " numb1
+read -p "Enter another  number : " numb2
+result=`expr $numb1 - $numb2`
+echo "Difference is : " $result
